@@ -1,4 +1,4 @@
-package com.ntnguyen.udemy;
+package com.ntnguyen.udemy.multithreading;
 
 import java.util.ArrayList;
 import java.util.List;
