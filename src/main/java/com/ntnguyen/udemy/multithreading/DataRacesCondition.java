@@ -1,5 +1,7 @@
 package com.ntnguyen.udemy.multithreading;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class DataRacesCondition {
 
     public static void main(String[] args) throws InterruptedException {
@@ -50,18 +52,18 @@ public class DataRacesCondition {
 
     static class Counter {
 
-        private int count = 0;
+        private AtomicInteger count = new AtomicInteger(0);
 
-        public synchronized void increment() {
-            count++;
+        public void increment() {
+            count.incrementAndGet();
         }
 
-        public synchronized void decrement() {
-            count--;
+        public void decrement() {
+            count.decrementAndGet();
         }
 
         public int getCount() {
-            return count;
+            return count.get();
         }
     }
 }
