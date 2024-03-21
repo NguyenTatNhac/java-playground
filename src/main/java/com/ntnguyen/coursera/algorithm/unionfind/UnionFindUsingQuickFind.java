@@ -3,6 +3,9 @@ package com.ntnguyen.coursera.algorithm.unionfind;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Union Find using Quick Find. Quick Find union operation is too slow.
+ */
 public class UnionFindUsingQuickFind implements UnionFind {
 
     private final int[] ids;
@@ -35,6 +38,7 @@ public class UnionFindUsingQuickFind implements UnionFind {
         return ids[p] == ids[q];
     }
 
+    @Override
     public List<Integer> getBucket() {
         return Arrays.stream(ids).boxed().toList();
     }
