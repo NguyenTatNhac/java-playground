@@ -2,15 +2,17 @@ package com.ntnguyen.coursera.algorithm.unionfind;
 
 import java.util.List;
 
-public class UnionFindUsingQuickUnion implements UnionFind {
+public class UnionFindUsingWeightedQuickUnion implements UnionFind {
+    private final int[] ids;
+    private final int [] size;
 
-    private final int [] ids;
-
-    public UnionFindUsingQuickUnion(int n) {
+    public UnionFindUsingWeightedQuickUnion(int n) {
         ids = new int[n];
+        size = new int[n];
 
         for (int i = 0; i < n; i++) {
             ids[i] = i;
+            size[i] = 1;
         }
     }
 
@@ -18,7 +20,18 @@ public class UnionFindUsingQuickUnion implements UnionFind {
     public void union(int p, int q) {
         int rootP = root(p);
         int rootQ = root(q);
-        ids[rootP] = rootQ;
+
+        if (rootQ == rootP) {
+            return;
+        }
+
+        if (size[rootP] > size[rootQ]) {
+            ids[rootQ] = rootP;
+            size[rootP] += size[rootQ];
+        } else {
+            ids[rootP] = rootQ;
+            size[rootQ] += size[rootP];
+        }
     }
 
     @Override
@@ -31,14 +44,14 @@ public class UnionFindUsingQuickUnion implements UnionFind {
         return null;
     }
 
-    private int root(int i) {
-        while (i != ids[i]) {
+    private int root(int n) {
+        while (n != ids[n]) {
             /* when finding the root, for each node, we want
              * to re-pointed that node directly to the parent.
              * This optimization called path compression. */
-            ids[i] = ids[ids[i]]; // optimize
-            i = ids[i];
+            ids[n] = ids[ids[n]]; // optimize
+            n = ids[n];
         }
-        return i;
+        return n;
     }
 }
