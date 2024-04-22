@@ -1,8 +1,8 @@
 package com.ntnguyen.leetcode;
 
-public class ZigzagConversion6 {
+public class _6_ZigzagConversion_Solution1 {
     public static void main(String[] args) {
-        ZigzagConversion6 o = new ZigzagConversion6();
+        _6_ZigzagConversion_Solution1 o = new _6_ZigzagConversion_Solution1();
 
         String s = "PAYPALISHIRING";
         int numRows = 3;

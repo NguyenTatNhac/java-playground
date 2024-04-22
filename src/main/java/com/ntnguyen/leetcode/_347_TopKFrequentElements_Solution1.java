@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TopKFrequentElements347Solution1 {
+public class _347_TopKFrequentElements_Solution1 {
 
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> countingMap = new HashMap<>();

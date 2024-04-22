@@ -3,7 +3,6 @@ package com.ntnguyen.leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 /* Given an array nums of distinct integers, return all the possible permutations.
  * You can return the answer in any order.
@@ -20,7 +19,7 @@ import java.util.Objects;
  * Input: nums = [1]
  * Output: [[1]]
  **/
-public class _46PermutationsSolution1 {
+public class _46_Permutations_Solution1 {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> output = new ArrayList<>();

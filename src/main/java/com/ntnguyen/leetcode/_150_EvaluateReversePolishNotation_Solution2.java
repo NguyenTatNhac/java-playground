@@ -2,7 +2,7 @@ package com.ntnguyen.leetcode;
 
 import java.util.Stack;
 
-public class EvaluateReversePolishNotation150Solution2 {
+public class _150_EvaluateReversePolishNotation_Solution2 {
 
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack<>();

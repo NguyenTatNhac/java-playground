@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ContainsDuplicate217Solution1 {
+public class _271_ContainsDuplicate_Solution1 {
 
     public static void main(String[] args) {
-        ContainsDuplicate217Solution1 object = new ContainsDuplicate217Solution1();
+        _271_ContainsDuplicate_Solution1 object = new _271_ContainsDuplicate_Solution1();
 
         int[] nums = {2, 3, 5, 6};
         System.out.println(object.containsDuplicate(nums));

@@ -1,6 +1,6 @@
 package com.ntnguyen.leetcode;
 
-public class MinStack155 {
+public class _155_MinStack_Solution1 {
     Node head;
 
     public void push(int val) {

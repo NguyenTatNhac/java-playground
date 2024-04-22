@@ -2,11 +2,11 @@ package com.ntnguyen.leetcode;
 
 import java.util.Arrays;
 
-public class ValidAnagram242Solution2 {
+public class _242_ValidAnagram_Solution2 {
 
     public static void main(String[] args) {
         String s = "aacc", t = "ccac";
-        ValidAnagram242Solution2 o = new ValidAnagram242Solution2();
+        _242_ValidAnagram_Solution2 o = new _242_ValidAnagram_Solution2();
         System.out.println(o.isAnagram(s, t));
     }
 

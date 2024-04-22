@@ -3,10 +3,10 @@ package com.ntnguyen.leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContainsDuplicate217Solution2 {
+public class _271_ContainsDuplicate_Solution2 {
 
     public static void main(String[] args) {
-        ContainsDuplicate217Solution2 object = new ContainsDuplicate217Solution2();
+        _271_ContainsDuplicate_Solution2 object = new _271_ContainsDuplicate_Solution2();
 
         int[] nums = {2, 3, 5, 6};
         System.out.println(object.containsDuplicate(nums));
